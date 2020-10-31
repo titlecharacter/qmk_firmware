@@ -116,6 +116,7 @@
     * [概要](ja/breaking_changes.md)
     * [プルリクエストにフラグが付けられた](ja/breaking_changes_instructions.md)
     * 履歴
+      * [2020年8月29日](ja/ChangeLog/20200829.md)
       * [2020年5月30日](ja/ChangeLog/20200530.md)
       * [2020年2月29日](ja/ChangeLog/20200229.md)
       * [2019年8月30日](ja/ChangeLog/20190830.md)
@@ -132,7 +133,7 @@
       * [WS2812 ドライバ](ja/ws2812_driver.md)
       * [EEPROM ドライバ](ja/eeprom_driver.md)
       * [シリアル ドライバ](ja/serial_driver.md)
-    * [GPIO コントロール](ja/internals_gpio_control.md)
+    * [GPIO 制御](ja/internals_gpio_control.md)
     * [キーボード ガイドライン](ja/hardware_keyboard_guidelines.md)
 
   * Python 開発
