@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, SHF_NTR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI, MO(1),  KC_SPC,     KC_BSPC, RAI_ENT, KC_RGUI
+                                          KC_LGUI, MO(1),   KC_SPC,     SHF_NTR, RAI_ENT, KC_RGUI
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_AMPR,                      KC_PLUS,    KC_4,    KC_5,    KC_6, KC_MINS, KC_UNDS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_CIRC, KC_BSLS, KC_LBRC, KC_RBRC, KC_TILD,                      KC_PERC,    KC_1,    KC_2,    KC_3, KC_HASH, XXXXXXX,
+      KC_LSFT, KC_CIRC, KC_BSLS, KC_LBRC, KC_RBRC, KC_TILD,                      KC_PERC,    KC_1,    KC_2,    KC_3, KC_HASH, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT,  ADJ_ZER, GUI_DOT
                                       //`--------------------------'  `--------------------------'
@@ -103,6 +103,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RAI_ENT:
+            return true;
+        case SHF_NTR:
             return true;
         default:
             return false;
